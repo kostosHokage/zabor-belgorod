@@ -4,6 +4,8 @@
   max-height: 103px;
   height: 100%;
   align-items: center;
+  max-width: 1317px;
+  padding: 12px 0;
 }
 
 .logo {
@@ -20,7 +22,6 @@
     span {
       font-weight: 400;
       font-size: 16px;
-      line-height: 100%;
       letter-spacing: 0;
 
     }
@@ -29,7 +30,6 @@
   &-worktime {
     font-weight: 300;
     font-size: 14px;
-    line-height: 100%;
     letter-spacing: 0;
     color: #4C4A3F;
   }
@@ -46,7 +46,6 @@
     text-align: end;
     font-weight: 400;
     font-size: 16px;
-    line-height: 100%;
     letter-spacing: 0;
     color: #0C4C01;
     gap: 4px;
@@ -62,12 +61,16 @@
   &-item {
     font-weight: 400;
     font-size: 18px;
-    line-height: 100%;
     letter-spacing: 0;
 
     a {
       text-decoration: none;
       color: #000000;
+
+      &:hover {
+        color: #0C4C01;
+        transition: 0.3s ease;
+      }
     }
   }
 }
