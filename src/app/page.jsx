@@ -1,9 +1,10 @@
 import '../styles/main.scss';
 import Button from '@/components/Button';
 import TitleHeader from '@/components/TitleHeader';
-import { advantage, fences, questions } from '../../public/data';
+import { advantage, fences, questions, steps } from '../../public/data';
 import QuestionCard from '@/components/QuestionCard';
 import FenceCard from '@/components/FenceCard';
+import StepsCard from '@/components/StepsCard';
 
 const HomePage = () => {
   return (
@@ -34,6 +35,13 @@ const HomePage = () => {
         </div>
 
         <div className="fencesForHouse-cards">
+          <div className="fencesForHouse-cards__item">
+            <img
+              style={{ height: '100%' }}
+              src="/images/previewCard.png"
+              alt=""
+            />
+          </div>
           {questions.map((item) => {
             return (
               <QuestionCard
@@ -116,6 +124,19 @@ const HomePage = () => {
               <div className="montage-stages__steps-line" />
               <div className="montage-stages__steps-icon">05</div>
             </div>
+          </div>
+
+          <div className="montage-cards">
+            {steps.map((item) => {
+              return (
+                <StepsCard
+                  key={item.stage}
+                  title={item.title}
+                  icon={item.icon}
+                  stage={item.stage}
+                />
+              );
+            })}
           </div>
         </div>
       </div>

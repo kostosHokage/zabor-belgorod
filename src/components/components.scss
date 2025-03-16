@@ -139,3 +139,102 @@
     color: white;
   }
 }
+
+
+
+.steps-card {
+  border-radius: 15px;
+  width: 245px;
+  height: 231px;
+  background: #FFFFFF;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  &__icon {
+    height: 56px;
+    width: 56px;
+    margin-bottom: 23px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+
+    &-stages {
+      font-weight: 500;
+      font-size: 18px;
+      letter-spacing: 0;
+      color: #4C4A3F;
+      margin-bottom: 4px;
+    }
+
+    &-title {
+      font-weight: 500;
+      font-size: 24px;
+      letter-spacing: 0;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

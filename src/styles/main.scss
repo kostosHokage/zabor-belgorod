@@ -44,6 +44,12 @@
     &-cards {
       display: flex;
       gap: 24px;
+
+      &__item {
+        border-radius: 15px;
+        max-width: 424px;
+        width: 100%;
+      }
     }
   }
 
@@ -103,6 +109,7 @@
     &-stages {
       display: flex;
       width: 100%;
+      margin-bottom: 32px;
 
       &__steps {
         display: flex;
@@ -128,6 +135,12 @@
           justify-content: center;
         }
       }
+    }
+
+    &-cards {
+      display: flex;
+      gap: 24px;
+      align-items: center;
     }
   }
 
