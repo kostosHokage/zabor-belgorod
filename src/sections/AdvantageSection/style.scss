@@ -1,0 +1,19 @@
+.advantage {
+
+  &__container {
+    max-width: 1320px;
+  }
+
+  &-cards {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+
+    &__container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      max-width: 872px;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.stock-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  &__image {
+    max-width: 424px;
+    max-height: 424px;
+    height: 100%;
+    width: 100%;
+
+    img {
+      height: 100%;
+      border-radius: 15px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    &-title {
+      font-size: 24px;
+      font-weight: 800;
+    }
+
+    &-price {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+
+      img {
+        width: 56px;
+        height: 56px;
+      }
+    }
+
+    &-description {
+      max-width: 760px;
+      font-size: 20px;
+      line-height: 30px;
+
+    }
+  }
+}

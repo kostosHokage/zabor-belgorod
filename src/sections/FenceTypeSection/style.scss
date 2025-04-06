@@ -1,0 +1,17 @@
+.fenceType {
+  &-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+  }
+
+  &-title {
+    color: #0C4C01;
+    font-weight: 800;
+    font-size: 36px;
+    letter-spacing: 0;
+    margin-bottom: 50px;
+
+  }
+
+}

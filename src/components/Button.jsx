@@ -8,6 +8,7 @@ const Button = ({ title }) => {
         height: 46,
         lineHeight: '140%',
         letterSpacing: 0,
+        width: 'max-content',
         background: '#1DB606',
         padding: '12px 24px',
         color: 'white',
