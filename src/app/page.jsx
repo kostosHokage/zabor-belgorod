@@ -7,6 +7,8 @@ import FullWidthSection from '@/components/FullWidthSection';
 import MontageSection from '@/sections/MontageSection';
 import FenceTypeSection from '@/sections/FenceTypeSection';
 import StocksSection from '@/sections/StocksSection';
+import ReviewsSection from '@/sections/ReviewsSection';
+import FormSection from '@/sections/FormSection';
 
 const HomePage = () => {
   return (
@@ -15,9 +17,9 @@ const HomePage = () => {
         <MainSection />
       </div>
 
-      {/*<FullWidthSection>*/}
-      {/*  <AboutSection />*/}
-      {/*</FullWidthSection>*/}
+      <FullWidthSection>
+        <AboutSection />
+      </FullWidthSection>
 
       {/*<div className="m150">*/}
       {/*  <FencesSection />*/}
@@ -31,13 +33,21 @@ const HomePage = () => {
       {/*  <FenceTypeSection />*/}
       {/*</div>*/}
 
-      <FullWidthSection>
-        <StocksSection />
-      </FullWidthSection>
+      {/*<FullWidthSection>*/}
+      {/*  <StocksSection />*/}
+      {/*</FullWidthSection>*/}
 
-      <FullWidthSection>
-        <MontageSection />
-      </FullWidthSection>
+      {/*<div className="m150">*/}
+      {/*  <ReviewsSection />*/}
+      {/*</div>*/}
+
+      {/*<FullWidthSection>*/}
+      {/*  <MontageSection />*/}
+      {/*</FullWidthSection>*/}
+
+      <div className="m150">
+        <FormSection />
+      </div>
     </>
   );
 };

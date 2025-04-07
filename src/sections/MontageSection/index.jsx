@@ -17,31 +17,34 @@ const MontageSection = () => {
           />
         </div>
 
-        <div className="montage-stages">
-          <div className="montage-stages__steps">
-            <Button title="Консультация" />
-            <div className="montage-stages__steps-line" />
-            <div className="montage-stages__steps-icon">02</div>
-            <div className="montage-stages__steps-line" />
-            <div className="montage-stages__steps-icon">03</div>
-            <div className="montage-stages__steps-line" />
-            <div className="montage-stages__steps-icon">04</div>
-            <div className="montage-stages__steps-line" />
-            <div className="montage-stages__steps-icon">05</div>
-          </div>
+        {/* Этапы с цифрами/кнопкой над карточками */}
+        <div className="montage-stages__steps-wrapper">
+          {steps.map((item, index) => (
+            <div key={item.stage} className="montage-stages__step-block">
+              <div className="montage-stages__step-icon">
+                {index === 0 ? (
+                  <Button title="Консультация" />
+                ) : (
+                  `0${index + 1}`
+                )}
+              </div>
+              {index < steps.length - 1 && (
+                <div className="montage-stages__step-line" />
+              )}
+            </div>
+          ))}
         </div>
 
+        {/* Карточки этапов */}
         <div className="montage-cards">
-          {steps.map((item) => {
-            return (
-              <StepsCard
-                key={item.stage}
-                title={item.title}
-                icon={item.icon}
-                stage={item.stage}
-              />
-            );
-          })}
+          {steps.map((item) => (
+            <StepsCard
+              key={item.stage}
+              title={item.title}
+              icon={item.icon}
+              stage={item.stage}
+            />
+          ))}
         </div>
       </div>
     </div>

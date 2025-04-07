@@ -1,0 +1,41 @@
+.form {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  &-section {
+    &__header {
+      max-width: 645px;
+      height: 235px;
+    }
+
+    &__steps {
+      &-cards {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+
+      }
+    }
+  }
+
+  &-step {
+    display: flex;
+    flex-direction: column;
+    background: #F3F3F3;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 237px;
+
+    &__number {
+      font-size: 64px;
+      font-weight: 800;
+      color: #0C4C01;
+    }
+
+    &__title {
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+}

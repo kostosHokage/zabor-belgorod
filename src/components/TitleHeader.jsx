@@ -1,8 +1,15 @@
 import './components.scss';
 
-const TitleHeader = ({ title, text, halfMargin, subdesc }) => {
+const TitleHeader = ({ title, text, halfMargin, subdesc, column }) => {
   return (
-    <div style={{ marginBottom: halfMargin ? 32 : 50 }} className="titleHeader">
+    <div
+      style={{
+        marginBottom: halfMargin ? 32 : 50,
+        display: 'flex',
+        flexDirection: column ? 'column' : 'row',
+      }}
+      className="titleHeader"
+    >
       <h2 className="titleHeader-title">{title}</h2>
       {text ? (
         <span className="titleHeader-description">
