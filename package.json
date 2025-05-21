@@ -13,19 +13,26 @@
     "eslint-config-prettier": "^10.1.1",
     "eslint-plugin-prettier": "^5.2.3",
     "eslint-plugin-react": "^7.37.4",
-    "next": "^15.2.2",
+    "lucide-react": "^0.487.0",
+    "next": "^15.3.1",
     "prettier": "^3.5.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-hook-form": "^7.55.0",
+    "react-phone-number-input": "^3.4.12",
+    "react-select": "^5.10.1",
     "react-slick": "^0.30.3",
     "sass": "^1.85.1",
     "slick-carousel": "^1.8.1",
-    "swiper": "^11.2.6"
+    "swiper": "^11.2.6",
+    "webpack": "^5.99.7"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@types/node": "22.14.1",
     "eslint": "^9.22.0",
-    "eslint-config-next": "15.1.7"
+    "eslint-config-next": "15.1.7",
+    "typescript": "5.8.3"
   },
   "packageManager": "yarn@4.5.1"
 }

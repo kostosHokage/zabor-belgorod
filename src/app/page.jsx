@@ -21,29 +21,34 @@ const HomePage = () => {
         <AboutSection />
       </FullWidthSection>
 
-      {/*<div className="m150">*/}
-      {/*  <FencesSection />*/}
-      {/*</div>*/}
+      <div className="m150">
+        <FencesSection
+          title="Заборы и ограждения для частного дома"
+          description="Выбор ограждения для частного дома – важный этап строительства, который
+        влияет на безопасность, приватность и внешний вид участка. Какой забор
+        выбрать? Все зависит от ваших потребностей и особенностей территории."
+        />
+      </div>
 
-      {/*<FullWidthSection>*/}
-      {/*  <AdvantageSection />*/}
-      {/*</FullWidthSection>*/}
+      <FullWidthSection>
+        <AdvantageSection />
+      </FullWidthSection>
 
-      {/*<div className="m150">*/}
-      {/*  <FenceTypeSection />*/}
-      {/*</div>*/}
+      <div className="m150">
+        <FenceTypeSection />
+      </div>
 
-      {/*<FullWidthSection>*/}
-      {/*  <StocksSection />*/}
-      {/*</FullWidthSection>*/}
+      <FullWidthSection>
+        <StocksSection />
+      </FullWidthSection>
 
-      {/*<div className="m150">*/}
-      {/*  <ReviewsSection />*/}
-      {/*</div>*/}
+      <div className="m150">
+        <ReviewsSection />
+      </div>
 
-      {/*<FullWidthSection>*/}
-      {/*  <MontageSection />*/}
-      {/*</FullWidthSection>*/}
+      <FullWidthSection>
+        <MontageSection />
+      </FullWidthSection>
 
       <div className="m150">
         <FormSection />

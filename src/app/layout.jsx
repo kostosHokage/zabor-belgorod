@@ -1,6 +1,7 @@
 import './globals.css';
 import './style.scss';
-import Header from '@/components/header';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 const Layout = ({ children }) => {
   return (
@@ -26,9 +27,11 @@ const Layout = ({ children }) => {
         <main className="layout-main">
           <div className="container">{children}</div>
         </main>
-        {/*<footer>*/}
-        {/*    <div className="container">Подвал</div>*/}
-        {/*</footer>*/}
+        <footer style={{ background: '#0C4C01' }}>
+          <div className="container">
+            <Footer />
+          </div>
+        </footer>
       </body>
     </html>
   );

@@ -2,6 +2,7 @@ import React from 'react';
 import './style.scss';
 import TitleHeader from '@/components/TitleHeader';
 import FormStep from '@/sections/FormSection/FormStep';
+import FormComponent from '@/components/FormComponent';
 
 const steps = [
   { number: 1, title: 'Консультация, замер, договор' },
@@ -17,8 +18,8 @@ const FormSection = () => {
           <TitleHeader
             column
             title="Заборы в Белгороде"
-            text="Стоимость ограждения зависит от дороговизны материалов и трудозатрат. Наша компания осуществляет монтаж заборов в Белгороде под ключ. Цены за погонный метр – одни из самых доступных в регионе.
-Рассчитать стоимость и заказать установку можно на сайте или по телефону."
+            text={`Стоимость ограждения зависит от дороговизны материалов и трудозатрат. Наша компания осуществляет монтаж заборов в Белгороде под ключ. Цены за погонный метр – одни из самых доступных в регионе.
+Рассчитать стоимость и заказать установку можно на сайте или по телефону.`}
           />
         </div>
         <div className="form-section__steps">
@@ -32,7 +33,9 @@ const FormSection = () => {
           </div>
         </div>
       </div>
-      <div className="form-card">card</div>
+      <div className="form-card">
+        <FormComponent />
+      </div>
     </div>
   );
 };
