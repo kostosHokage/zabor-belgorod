@@ -8,6 +8,12 @@
     box-sizing: border-box;
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 html {
     -webkit-text-size-adjust: 100%;
     -moz-tab-size: 4;
@@ -38,17 +44,21 @@ button {
     cursor: pointer;
 }
 
-/* Чистим input и textarea */
 input, textarea, button, select {
     font: inherit;
     outline: none;
 }
 
-/* Базовые стили для body */
 body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     line-height: 1.4;
     overflow-x: hidden;
+    overflow-y: scroll;
     font-family: "Manrope", sans-serif;
     background-color: #fff;
     color: #000;
+    z-index: 1;
 }

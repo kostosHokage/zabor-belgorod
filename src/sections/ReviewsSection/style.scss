@@ -23,6 +23,10 @@
       font-weight: 800;
       font-size: 24px;
       color: black;
+
+      @media (max-width: 460px) {
+        font-size: 20px;
+      }
     }
 
     &-date {
@@ -35,6 +39,15 @@
     span {
       font-size: 18px;
       font-weight: 400;
+
+      @media (max-width: 460px) {
+        font-size: 16px;
+      }
     }
+  }
+
+  @media(max-width: 900px) {
+    max-width: 99%;
+    height: 100%;
   }
 }

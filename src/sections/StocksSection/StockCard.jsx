@@ -12,6 +12,7 @@ const StockCard = ({ item }) => {
           <img src="/images/icons/sale.svg" alt="sale" />
           <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
             <span
+              className="stock-card__content-price_old"
               style={{
                 fontSize: 18,
                 fontWeight: 500,
@@ -22,6 +23,7 @@ const StockCard = ({ item }) => {
               {item.oldPrice}
             </span>
             <span
+              className="stock-card__content-price_new"
               style={{
                 fontSize: 24,
                 color: '#0C4C01',

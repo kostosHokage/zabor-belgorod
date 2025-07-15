@@ -7,9 +7,7 @@ const AboutSection = () => {
   return (
     <div className="about">
       <div className="about-text">
-        <h3 style={{ color: '#0C4C01', fontSize: 36, fontWeight: 800 }}>
-          О нас
-        </h3>
+        <TitleHeader title="О нас" />
         {aboutContent.map((item, index) => {
           return (
             <div

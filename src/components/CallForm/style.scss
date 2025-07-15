@@ -1,0 +1,135 @@
+.callform {
+  max-width: 576px;
+  width: 100%;
+  background-color: #0C4C01;
+  border-radius: 15px;
+
+  &__container {
+    padding: 70px;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      label {
+        color: white !important;
+        margin-bottom: 3px !important;
+      }
+    }
+  }
+
+  &-text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+    h2 {
+      font-weight: 700;
+      font-size: 28px;
+      color: #FFFFFF;
+    }
+    span {
+      font-size: 18px;
+      font-weight: 400;
+      color: white;
+    }
+  }
+  .privacy-checkbox {
+    margin: 15px 0;
+
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+      padding-left: 28px;
+      user-select: none;
+      font-size: 14px;
+      color: #333;
+
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+
+      .checkbox-custom {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 18px;
+        width: 18px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        transition: all 0.2s;
+
+        &:after {
+          content: "";
+          position: absolute;
+          display: none;
+          left: 5px;
+          top: 1px;
+          width: 5px;
+          height: 10px;
+          border: solid #fff;
+          border-width: 0 2px 2px 0;
+          transform: rotate(45deg);
+        }
+      }
+
+      input:checked ~ .checkbox-custom {
+        background-color: #1DB606;
+        border-color: #1DB606;
+
+        &:after {
+          display: block;
+        }
+      }
+
+      .checkbox-text {
+        margin-left: 8px;
+
+        a {
+          color: #1DB606;
+          text-decoration: underline;
+          transition: color 0.2s;
+
+          &:hover {
+            color: darken(#1DB606, 10%);
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    .error-message {
+      color: rgba(244, 74, 74, 0.91);
+      font-size: 16px;
+      margin-top: 5px;
+    }
+  }
+
+  .modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 800px;
+    width: 90%;
+    overflow-y: auto;
+    position: relative;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+    color: #333;
+  }
+
+  .modal-close {
+    color: #503030;
+    &:hover {
+      color: #4b5563;
+    }
+  }
+}

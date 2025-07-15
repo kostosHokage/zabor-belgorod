@@ -12,14 +12,29 @@ const inputStyle = {
   color: '#0C4C01',
 };
 
-const InputMail = ({ register, name, rules }) => {
+const labelStyle = {
+  display: 'block',
+  marginBottom: '8px',
+  fontSize: '16px',
+  color: '#0C4C01',
+  fontWeight: '500',
+};
+
+const InputMail = ({ register, name, rules, label }) => {
   return (
-    <input
-      style={inputStyle}
-      type="email"
-      placeholder="example@mail.com"
-      {...register(name, rules)}
-    />
+    <div>
+      {label && (
+        <label style={labelStyle} htmlFor={name}>
+          {label}
+        </label>
+      )}
+      <input
+        style={inputStyle}
+        type="email"
+        placeholder="example@mail.com"
+        {...register(name, rules)}
+      />
+    </div>
   );
 };
 

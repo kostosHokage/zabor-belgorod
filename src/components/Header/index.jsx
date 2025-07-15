@@ -4,11 +4,22 @@ import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import Button from '../Button';
 import CatalogPopup from '../Header/CatalogPopup';
+import Modal from '@/components/Modal';
+import CallForm from '@/components/CallForm';
+import FormComponent from '@/components/FormComponent';
+import BurgerMenu from '../BurgerMenu';
+import FadeInWhenVisible from '@/components/FadeInWhenVisible';
 
 const Header = () => {
   const [showCatalog, setShowCatalog] = useState(false);
   const catalogRef = useRef(null);
   const catalogButtonRef = useRef(null);
+  const headerRef = useRef(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const toggleCatalog = () => {
+    setShowCatalog((prev) => !prev);
+  };
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -37,63 +48,76 @@ const Header = () => {
     };
   }, []);
 
-  const toggleCatalog = () => {
-    setShowCatalog(!showCatalog);
-  };
-
   return (
-    <div className="header">
-      <div className="logo">
-        <a href={'/'}>
-          <div className="logo-content">
-            <img src="/images/logo.svg" alt="" />
-            <span className="logo-content__title">
-              Заборы <br /> в Белгороде
-            </span>
+    <FadeInWhenVisible>
+      <header className="header" ref={headerRef}>
+        <div className="logo">
+          <a href={'/'}>
+            <div className="logo-content">
+              <img src="/images/logo.svg" alt="Логотип" />
+              <span className="logo-content__title">
+                Заборы <br /> в Белгороде
+              </span>
+            </div>
+          </a>
+          <div className="logo-worktime">
+            <span>Время работы с 09:00 до 20:00</span>
           </div>
-        </a>
-        <div className="logo-worktime">
-          <span>Время работы с 09:00 до 20:00</span>
         </div>
-      </div>
 
-      <CatalogPopup
-        isOpen={showCatalog}
-        ref={catalogRef}
-        onClose={() => setShowCatalog(false)}
-      />
+        <CatalogPopup
+          isOpen={showCatalog}
+          ref={catalogRef}
+          onClose={() => setShowCatalog(false)}
+        />
 
-      <div className="nav">
-        <div className="nav-item">
-          <button
-            ref={catalogButtonRef}
-            className="nav-item__catalog-button"
-            onClick={toggleCatalog}
-            aria-expanded={showCatalog}
-          >
-            Каталог
-          </button>
-        </div>
-        <div className="nav-item">
-          <Link href="/gates">
-            <span>Компания</span>
-          </Link>
-        </div>
-        <div className="nav-item">
-          <Link href="/materials">
-            <span>Контакты</span>
-          </Link>
-        </div>
-      </div>
+        <nav className="nav">
+          <div className="nav-item">
+            <button
+              ref={catalogButtonRef}
+              className="nav-item__catalog-button"
+              onClick={toggleCatalog}
+              aria-expanded={showCatalog}
+              aria-controls="catalog-popup"
+            >
+              Каталог
+            </button>
+          </div>
+          <div className="nav-item">
+            <Link href="/company">
+              <span>Компания</span>
+            </Link>
+          </div>
+          <div className="nav-item">
+            <Link href="/contacts">
+              <span>Контакты</span>
+            </Link>
+          </div>
+          <div className="nav-item">
+            <Link href="/works">
+              <span>Наши работы</span>
+            </Link>
+          </div>
+        </nav>
 
-      <div className="callme">
-        <div className="callme-contacts">
-          <span>golovinroman797@mail.ru</span>
-          <span>8 (905) 678-93-08</span>
+        <div className="callme">
+          <div className="callme-contacts">
+            <span>golovinroman797@mail.ru</span>
+            <span>8 (905) 678-93-08</span>
+          </div>
+          <Button
+            onClick={() => setIsModalOpen(true)}
+            title="Перезвоните мне"
+          />
         </div>
-        <Button title="Перезвоните мне" />
-      </div>
-    </div>
+
+        <BurgerMenu />
+
+        <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+          <CallForm />
+        </Modal>
+      </header>
+    </FadeInWhenVisible>
   );
 };
 

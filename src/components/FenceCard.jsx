@@ -1,5 +1,6 @@
 import './components.scss';
 const FenceCard = ({ title, price, image, width }) => {
+  console.log(123);
   return (
     <div className="fenceCard" style={{ maxWidth: width, width: '100%' }}>
       <div className="fenceCard__container">

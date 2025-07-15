@@ -9,50 +9,69 @@ import FenceTypeSection from '@/sections/FenceTypeSection';
 import StocksSection from '@/sections/StocksSection';
 import ReviewsSection from '@/sections/ReviewsSection';
 import FormSection from '@/sections/FormSection';
+import FadeInWhenVisible from '@/components/FadeInWhenVisible';
 
 const HomePage = () => {
   return (
     <>
-      <div style={{ marginTop: 60 }} className="m150">
-        <MainSection />
-      </div>
+      <FadeInWhenVisible>
+        <div style={{ marginTop: 60 }} className="m150">
+          <MainSection />
+        </div>
+      </FadeInWhenVisible>
 
-      <FullWidthSection>
-        <AboutSection />
-      </FullWidthSection>
+      <FadeInWhenVisible>
+        <FullWidthSection>
+          <AboutSection />
+        </FullWidthSection>
+      </FadeInWhenVisible>
 
-      <div className="m150">
-        <FencesSection
-          title="Заборы и ограждения для частного дома"
-          description="Выбор ограждения для частного дома – важный этап строительства, который
+      <FadeInWhenVisible>
+        <div className="m150">
+          <FencesSection
+            title="Заборы и ограждения для частного дома"
+            description="Выбор ограждения для частного дома – важный этап строительства, который
         влияет на безопасность, приватность и внешний вид участка. Какой забор
         выбрать? Все зависит от ваших потребностей и особенностей территории."
-        />
-      </div>
+          />
+        </div>
+      </FadeInWhenVisible>
 
-      <FullWidthSection>
-        <AdvantageSection />
-      </FullWidthSection>
+      <FadeInWhenVisible>
+        <FullWidthSection>
+          <AdvantageSection />
+        </FullWidthSection>
+      </FadeInWhenVisible>
 
-      <div className="m150">
-        <FenceTypeSection />
-      </div>
+      <FadeInWhenVisible>
+        <div className="m150">
+          <FenceTypeSection />
+        </div>
+      </FadeInWhenVisible>
 
-      <FullWidthSection>
-        <StocksSection />
-      </FullWidthSection>
+      <FadeInWhenVisible>
+        <FullWidthSection>
+          <StocksSection />
+        </FullWidthSection>
+      </FadeInWhenVisible>
 
-      <div className="m150">
-        <ReviewsSection />
-      </div>
+      <FadeInWhenVisible>
+        <div className="m150">
+          <ReviewsSection />
+        </div>
+      </FadeInWhenVisible>
 
-      <FullWidthSection>
-        <MontageSection />
-      </FullWidthSection>
+      <FadeInWhenVisible>
+        <FullWidthSection>
+          <MontageSection />
+        </FullWidthSection>
+      </FadeInWhenVisible>
 
-      <div className="m150">
-        <FormSection />
-      </div>
+      <FadeInWhenVisible>
+        <div className="m150">
+          <FormSection />
+        </div>
+      </FadeInWhenVisible>
     </>
   );
 };

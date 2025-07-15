@@ -12,7 +12,7 @@ const steps = [
 
 const FormSection = () => {
   return (
-    <div className="form">
+    <div className="form" id="form">
       <div className="form-section">
         <div className="form-section__header">
           <TitleHeader

@@ -32,7 +32,7 @@ export const fences = [
   {
     title: 'Заборы из цокольных кирпичей',
     price: 1200,
-    image: 'images/fences/blocks.png',
+    image: 'images/fences/kirpich.png',
     width: '31.82%',
   },
   {

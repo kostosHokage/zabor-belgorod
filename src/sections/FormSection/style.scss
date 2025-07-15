@@ -10,6 +10,10 @@
     &__header {
       max-width: 645px;
       height: 235px;
+
+      @media(max-width: 850px) {
+        height: 100%;
+      }
     }
 
     &__steps {
@@ -18,7 +22,23 @@
         align-items: center;
         gap: 24px;
 
+        @media(max-width: 1270px) {
+          gap: 20px;
+          align-items: stretch;
+        }
+
+        @media(max-width: 1165px) {
+          gap: 12px;
+        }
+
+        @media(max-width: 585px) {
+          flex-direction: column;
+        }
       }
+    }
+
+    @media(max-width: 1120px) {
+      gap: 20px;
     }
   }
 
@@ -34,11 +54,40 @@
       font-size: 64px;
       font-weight: 800;
       color: #0C4C01;
+
+      @media(max-width: 585px) {
+        font-size: 32px;
+      }
     }
 
     &__title {
       font-size: 18px;
       font-weight: 500;
+
+      @media(max-width: 585px) {
+        font-size: 16px;
+      }
     }
+
+    @media(max-width: 1270px) {
+      padding: 25px;
+      width: 33%;
+    }
+
+    @media(max-width: 1165px) {
+      padding: 20px;
+    }
+
+    @media(max-width: 1120px) {
+      max-width: 100%;
+    }
+
+    @media(max-width: 585px) {
+      width: 100%;
+    }
+  }
+
+  @media(max-width: 1120px) {
+    flex-direction: column;
   }
 }

@@ -5,7 +5,6 @@ export default async function handler(req, res) {
 
   const { name, phone, email } = req.body;
 
-  // Получаем переменные из .env.local
   const botToken = '7667989040:AAEXlL6k85udTAN6m8_7yvPT-AYa72SCwEw';
   const chatId = '-4721404625';
 

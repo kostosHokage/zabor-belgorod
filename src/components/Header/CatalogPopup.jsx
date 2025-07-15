@@ -1,14 +1,19 @@
 'use client';
-import React from 'react';
+import React, { forwardRef } from 'react';
+import { X } from 'lucide-react';
 import CatalogItem from './CatalogItem';
 import { categories } from '@/data/catalog';
-import { X } from 'lucide-react';
 
-const CatalogPopup = ({ isOpen, onClose }) => {
+const CatalogPopup = forwardRef(({ isOpen, onClose }, ref) => {
   const [activeCategory, setActiveCategory] = React.useState(0);
 
   return (
-    <div className={`catalog-popup ${isOpen ? 'active' : ''}`}>
+    <div
+      id="catalog-popup"
+      className={`catalog-popup ${isOpen ? 'active' : ''}`}
+      ref={ref}
+      aria-hidden={!isOpen}
+    >
       <button
         className="catalog-popup__close"
         onClick={onClose}
@@ -21,20 +26,23 @@ const CatalogPopup = ({ isOpen, onClose }) => {
         <div className="catalog-popup__categories">
           {categories.map((category, index) => (
             <div
-              key={index}
+              key={category.name}
               className={`catalog-popup__category ${index === activeCategory ? 'active' : ''}`}
               onClick={() => setActiveCategory(index)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => e.key === 'Enter' && setActiveCategory(index)}
             >
-              <img src={category.icon} alt={category.name} />
+              <img src={category.icon} alt="" aria-hidden="true" />
               {category.name}
             </div>
           ))}
         </div>
 
         <div className="catalog-popup__items">
-          {categories[activeCategory].items.map((item, index) => (
+          {categories[activeCategory].items.map((item) => (
             <CatalogItem
-              key={index}
+              key={item.title}
               onClick={onClose}
               image={item.image}
               title={item.title}
@@ -45,6 +53,8 @@ const CatalogPopup = ({ isOpen, onClose }) => {
       </div>
     </div>
   );
-};
+});
+
+CatalogPopup.displayName = 'CatalogPopup';
 
 export default CatalogPopup;

@@ -11,5 +11,12 @@
       max-width: 424px;
       width: 100%;
     }
+
+    @media (max-width: 1300px) {
+      flex-wrap: wrap;
+      gap: 12px;
+    }
   }
+  
+
 }

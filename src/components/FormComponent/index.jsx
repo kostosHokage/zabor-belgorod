@@ -1,11 +1,12 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import Input from '@/components/Input';
 import './style.scss';
 import CustomPhoneInput from '@/components/CustomPhoneInput';
 import InputMail from '@/components/InputMail';
 import Button from '@/components/Button';
+import PersonalData from '@/components/PersonalData';
 
 const FormComponent = () => {
   const {
@@ -14,16 +15,29 @@ const FormComponent = () => {
     control,
     formState: { errors },
     reset,
-  } = useForm();
+  } = useForm({
+    defaultValues: {
+      privacyPolicy: false,
+    },
+  });
 
-  const [isLoading, setIsLoading] = React.useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isPolicyOpen, setIsPolicyOpen] = useState(false);
 
   const onSubmit = async (data) => {
+    if (!data.privacyPolicy) {
+      alert(
+        'Для отправки формы необходимо согласие с политикой конфиденциальности'
+      );
+      return;
+    }
+
     const message = `Новая заявка с сайта:\n\nИмя: ${data.name}\nТелефон: ${data.phone}\nEmail: ${data.email || 'не указан'}`;
 
     const botToken = '7667989040:AAEXlL6k85udTAN6m8_7yvPT-AYa72SCwEw';
     const chatId = '-4721404625';
     setIsLoading(true);
+
     try {
       const response = await fetch(
         `https://api.telegram.org/bot${botToken}/sendMessage`,
@@ -66,7 +80,7 @@ const FormComponent = () => {
       <form onSubmit={handleSubmit(onSubmit)} className="form-container">
         <div>
           <Input
-            placeholder="Имя"
+            placeholder="Введите Ваше имя"
             {...register('name', {
               required: 'Введите имя!',
               minLength: {
@@ -111,6 +125,33 @@ const FormComponent = () => {
           )}
         </div>
 
+        <div className="privacy-checkbox">
+          <label className="checkbox-label">
+            <input
+              type="checkbox"
+              {...register('privacyPolicy', {
+                required: 'Необходимо согласие с политикой',
+              })}
+            />
+            <span className="checkbox-custom"></span>
+            <span className="checkbox-text">
+              Я согласен(а) с{' '}
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsPolicyOpen(true);
+                }}
+              >
+                политикой обработки персональных данных
+              </a>
+            </span>
+          </label>
+          {errors.privacyPolicy && (
+            <p className="error-message">{errors.privacyPolicy.message}</p>
+          )}
+        </div>
+
         <Button
           maxWidth={true}
           type="submit"
@@ -118,6 +159,11 @@ const FormComponent = () => {
           disabled={isLoading}
         />
       </form>
+
+      <PersonalData
+        isOpen={isPolicyOpen}
+        onClose={() => setIsPolicyOpen(false)}
+      />
     </div>
   );
 };

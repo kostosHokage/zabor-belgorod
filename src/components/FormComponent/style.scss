@@ -6,10 +6,118 @@
   margin: 0 auto;
   color: #ffffff;
   gap: 68px;
+
+  .modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 800px;
+    width: 90%;
+    overflow-y: auto;
+    position: relative;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+    color: #333;
+  }
+
+  .modal-close {
+    color: #503030;
+    &:hover {
+      color: #4b5563;
+    }
+  }
+
+  .privacy-checkbox {
+    margin: 15px 0;
+
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+      padding-left: 28px;
+      user-select: none;
+      font-size: 14px;
+      color: #333;
+
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+
+      .checkbox-custom {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 18px;
+        width: 18px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        transition: all 0.2s;
+
+        &:after {
+          content: "";
+          position: absolute;
+          display: none;
+          left: 5px;
+          top: 1px;
+          width: 5px;
+          height: 10px;
+          border: solid #fff;
+          border-width: 0 2px 2px 0;
+          transform: rotate(45deg);
+        }
+      }
+
+      input:checked ~ .checkbox-custom {
+        background-color: #1DB606;
+        border-color: #1DB606;
+
+        &:after {
+          display: block;
+        }
+      }
+
+      .checkbox-text {
+        margin-left: 8px;
+        color: white;
+
+        a {
+          color: #1DB606;
+          text-decoration: underline;
+          transition: color 0.2s;
+
+          &:hover {
+            color: darken(#1DB606, 10%);
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    .error-message {
+      color: red;
+      font-size: 12px;
+      margin-top: 5px;
+    }
+  }
+
+  @media(max-width: 585px) {
+    padding: 20px;
+    width: 100%;
+  }
 }
 
 .form-text {
   margin-bottom: 68px;
+
+  @media(max-width: 585px) {
+    margin-bottom: 0;
+  }
 }
 
 .form-title {
@@ -18,7 +126,10 @@
   margin-bottom: 12px;
   color: #FFFFFF;
   text-align: center;
-
+  @media(max-width: 585px) {
+    text-align: left;
+    font-size: 20px;
+  }
 }
 
 .form-subtitle {

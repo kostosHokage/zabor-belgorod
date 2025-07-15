@@ -40,6 +40,18 @@
     display: flex;
     gap: 24px;
     align-items: center;
+    
+    @media (max-width: 1236px) {
+      gap: 16px;
+    }
+
+    @media (max-width: 1088px) {
+      gap: 12px;
+    }
+
+    @media(max-width: 912px) {
+      flex-wrap: wrap;
+    }
   }
 }
 
@@ -48,6 +60,8 @@
   justify-content: space-between;
   margin-bottom: 32px;
   position: relative;
+
+
 }
 
 .montage-stages__step-block {
@@ -56,6 +70,9 @@
   align-items: center;
   flex: 1;
   position: relative;
+  @media(max-width: 912px) {
+    display: none;
+  }
 }
 
 .montage-stages__step-icon {
@@ -80,5 +97,21 @@
   height: 1px;
   background-color: #0C4C01;
   z-index: 0;
+}
+
+.montage-stages__btn {
+  display: none;
+
+  @media(max-width: 912px) {
+    display: flex;
+  }
+
+  @media (max-width: 541px) {
+    width: 100%;
+    button {
+      max-width: 100% !important;
+      width: 100% !important;
+    }
+  }
 }
 

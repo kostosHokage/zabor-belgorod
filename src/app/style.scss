@@ -8,3 +8,223 @@
 .layout-main {
   padding: 0 20px;
 }
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+
+  h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+    color: #6b7280;
+    margin-bottom: 2rem;
+  }
+
+  a:hover {
+    background: #198806 !important;
+  }
+}
+
+
+.company {
+  margin-bottom: 150px;
+  &-image {
+    max-width: 100%;
+    border-radius: 15px;
+    max-height: 520px;
+    img {
+      border-radius: 15px;
+      max-height: 520px;
+    }
+  }
+}
+
+.contacts-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.contacts-block {
+  display: flex;
+  padding: 30px 40px;
+  background-color: #F3F3F3;
+  border-radius: 15px;
+  max-width: 872px;
+  width: 100%;
+  justify-content: space-between;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    &-item {
+      display: flex;
+      align-content: center;
+      gap: 8px;
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    &:first-child {
+      margin-right: 10px;
+    }
+  }
+}
+
+.works-filter_btn {
+  padding: 10px 20px;
+  border: 2px solid #0C4C01;
+  background: none;
+  color: #0C4C01;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+
+  &:hover,
+  &.active {
+    background: #0C4C01;
+    color: white;
+  }
+}
+
+.slick-slider {
+  .slick-slide {
+    //padding: 10px;
+    outline: none;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    //height: 320px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .slick-dots {
+    bottom: -30px;
+    li {
+      margin: 0 5px;
+      button {
+        &:before {
+          color: #0C4C01;
+          font-size: 10px;
+        }
+      }
+      &.slick-active button:before {
+        color: #0C4C01;
+        opacity: 1;
+      }
+    }
+  }
+
+  img {
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.modal-slider {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Добавляем для корректного позиционирования кнопок */
+
+  .slick-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .modal-image {
+    max-height: 70vh;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+
+    &.loading {
+      opacity: 0;
+    }
+
+    /* Убираем эффект масштабирования при наведении */
+    &:hover {
+      transform: none;
+    }
+  }
+
+  .slick-prev,
+  .slick-next {
+    z-index: 10; /* Устанавливаем поверх изображения */
+    transition: all 0.3ms ease-in;
+    &:before {
+      font-size: 20px;
+      color: white !important;
+    }
+  }
+
+  .slick-prev {
+    left: 10px !important;
+  }
+
+  .slick-next {
+    right: 10px !important;
+  }
+
+  .slick-dots {
+    bottom: 10px;
+
+    li {
+      margin: 0 5px;
+    }
+
+    button {
+      width: 10px;
+      height: 10px;
+      background: #ccc;
+      border-radius: 50%;
+      border: none;
+      transition: background 0.3s ease;
+
+      &:before {
+        content: none;
+      }
+
+      &:hover,
+      &.slick-active {
+        background: #0C4C01;
+      }
+    }
+  }
+}

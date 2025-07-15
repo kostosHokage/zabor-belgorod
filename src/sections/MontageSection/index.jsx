@@ -17,8 +17,10 @@ const MontageSection = () => {
           />
         </div>
 
-        {/* Этапы с цифрами/кнопкой над карточками */}
         <div className="montage-stages__steps-wrapper">
+          <div className="montage-stages__btn">
+            <Button title="Консультация" />
+          </div>
           {steps.map((item, index) => (
             <div key={item.stage} className="montage-stages__step-block">
               <div className="montage-stages__step-icon">
@@ -35,7 +37,6 @@ const MontageSection = () => {
           ))}
         </div>
 
-        {/* Карточки этапов */}
         <div className="montage-cards">
           {steps.map((item) => (
             <StepsCard

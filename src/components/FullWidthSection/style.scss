@@ -21,4 +21,12 @@
     width: 100%;
     margin: 0 auto;
   }
+
+  @media (max-width: 1320px) {
+    padding: 70px 0 70px;
+  }
+
+  @media (max-width: 730px) {
+    padding: 24px 0 24px;
+  }
 }

@@ -45,12 +45,12 @@ export const categories = [
     icon: '/images/icons/roof2.svg',
     items: [
       {
-        image: '/images/catalog/wood.png',
+        image: '/images/catalog/raspashnie.png',
         title: 'Распашные ворота',
         href: '/gates/swing',
       },
       {
-        image: '/images/catalog/wood.png',
+        image: '/images/catalog/auto-vorota.png',
         title: 'Откатные ворота',
         href: '/gates/sliding',
       },
@@ -61,14 +61,9 @@ export const categories = [
     icon: '/images/icons/navesi.svg',
     items: [
       {
-        image: '/images/catalog/wood.png',
-        title: 'Металлические навесы',
+        image: '/images/catalog/navesi.png',
+        title: 'Навесы из поликарбоната',
         href: '/canopies/metal',
-      },
-      {
-        image: '/images/catalog/wood.png',
-        title: 'Деревянные навесы',
-        href: '/canopies/wood',
       },
     ],
   },
@@ -77,13 +72,18 @@ export const categories = [
     icon: '/images/icons/box.svg',
     items: [
       {
-        image: '/images/catalog/wood.png',
-        title: 'Профнастил',
-        href: '/materials/profnastil',
+        image: '/images/catalog/kir.png',
+        title: 'Кирпичи',
+        href: '/materials/wood',
       },
       {
-        image: '/images/catalog/wood.png',
-        title: 'Дерево',
+        image: '/images/catalog/kerblocks.png',
+        title: 'Керамзитобетонные блоки',
+        href: '/materials/wood',
+      },
+      {
+        image: '/images/catalog/cement.png',
+        title: 'Цемент',
         href: '/materials/wood',
       },
     ],

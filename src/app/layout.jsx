@@ -2,6 +2,7 @@ import './globals.css';
 import './style.scss';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import BurgerMenu from '@/components/BurgerMenu';
 
 const Layout = ({ children }) => {
   return (
@@ -19,7 +20,7 @@ const Layout = ({ children }) => {
         />
       </head>
       <body>
-        <header style={{ marginBottom: 40 }}>
+        <header>
           <div className="container">
             <Header />
           </div>
@@ -27,11 +28,11 @@ const Layout = ({ children }) => {
         <main className="layout-main">
           <div className="container">{children}</div>
         </main>
-        <footer style={{ background: '#0C4C01' }}>
-          <div className="container">
-            <Footer />
-          </div>
-        </footer>
+        {/*<footer style={{ background: '#0C4C01' }}>*/}
+        {/*  <div className="container">*/}
+        {/*    <Footer />*/}
+        {/*  </div>*/}
+        {/*</footer>*/}
       </body>
     </html>
   );

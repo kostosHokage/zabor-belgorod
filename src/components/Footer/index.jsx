@@ -1,7 +1,15 @@
-import React from 'react';
+'use client';
+import React, { useState } from 'react';
 import './style.scss';
+import Modal from '@/components/Modal';
+import PersonalData from '@/components/PersonalData';
 
 const Footer = () => {
+  const [isPolicyOpen, setIsPolicyOpen] = useState(false);
+
+  const openPolicyModal = () => setIsPolicyOpen(true);
+  const closePolicyModal = () => setIsPolicyOpen(false);
+
   return (
     <div className="footer">
       <div className="footer-content">
@@ -28,6 +36,12 @@ const Footer = () => {
 
           <div className="footer-info__rules">
             <span>© Заборы в Белгороде, 2025. Все права защищены.</span>
+            <span
+              className="footer-policy-link"
+              onClick={() => setIsPolicyOpen(true)}
+            >
+              Политика обработки персональных данных
+            </span>
           </div>
         </div>
       </div>
@@ -38,22 +52,23 @@ const Footer = () => {
           <div className="footer-columns-item__name">Из цокольных кирпичей</div>
           <div className="footer-columns-item__name">Из евроштакетника</div>
           <div className="footer-columns-item__name">Из сетки</div>
-          <div className="footer-columns-item__name">Из блоков</div>
+          <a href="/fences/concerte" className="footer-columns-item__name">
+            Из блоков
+          </a>
           <div className="footer-columns-item__name">Бетонные заборы</div>
           <div className="footer-columns-item__name">Из профлиста</div>
           <div className="footer-columns-item__name">Столбы для заборов</div>
         </div>
         <div className="footer-columns-item">
           <div className="footer-columns-item__title">Ворота</div>
-          <div className="footer-columns-item__name">Ворота 1</div>
-          <div className="footer-columns-item__name">Ворота 2</div>
-          <div className="footer-columns-item__name">Ворота 3</div>
+          <div className="footer-columns-item__name">Распашные ворота</div>
+          <div className="footer-columns-item__name">Откатные ворота</div>
         </div>
         <div className="footer-columns-item">
           <div className="footer-columns-item__title">Навесы</div>
-          <div className="footer-columns-item__name">Навесы 1</div>
-          <div className="footer-columns-item__name">Навесы 2</div>
-          <div className="footer-columns-item__name">Навесы 3</div>
+          <div className="footer-columns-item__name">
+            Навесы из поликарбоната
+          </div>
         </div>
         <div className="footer-columns-item">
           <div className="footer-columns-item__title">Материалы</div>
@@ -61,12 +76,17 @@ const Footer = () => {
           <div className="footer-columns-item__name">
             Керамзитобетонные блоки
           </div>
+          <div className="footer-columns-item__name">Кирпичи</div>
         </div>
         <div className="footer-columns-item">
           <div className="footer-columns-item__title">Контакты</div>
           <div className="footer-columns-item__name">Компания</div>
         </div>
       </div>
+      <PersonalData
+        isOpen={isPolicyOpen}
+        onClose={() => setIsPolicyOpen(false)}
+      />
     </div>
   );
 };
