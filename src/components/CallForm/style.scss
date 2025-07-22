@@ -1,6 +1,7 @@
 .callform {
   max-width: 576px;
   width: 100%;
+  height: max-content;
   background-color: #0C4C01;
   border-radius: 15px;
 
@@ -17,6 +18,14 @@
         margin-bottom: 3px !important;
       }
     }
+
+    @media(max-width: 700px) {
+      padding: 40px;
+    }
+
+    @media(max-width: 500px) {
+      padding: 24px;
+    }
   }
 
   &-text {
@@ -28,11 +37,17 @@
       font-weight: 700;
       font-size: 28px;
       color: #FFFFFF;
+      @media(max-width: 700px) {
+        font-size: 20px;
+      }
     }
     span {
       font-size: 18px;
       font-weight: 400;
       color: white;
+      @media(max-width: 700px) {
+        font-size: 16px;
+      }
     }
   }
   .privacy-checkbox {

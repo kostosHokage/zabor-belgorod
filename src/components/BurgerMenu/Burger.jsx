@@ -1,9 +1,9 @@
-import React from "react";
-import "./style.scss";
+import React from 'react';
+import './style.scss';
 
 const Burger = ({ open, setOpen }) => (
   <button
-    className={`custom-burger${open ? " open" : ""}`}
+    className={`custom-burger${open ? ' open' : ''}`}
     onClick={() => setOpen(!open)}
     aria-label="Открыть меню"
     type="button"

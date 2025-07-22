@@ -82,7 +82,7 @@ const CallForm = () => {
                   href="#"
                   onClick={(e) => {
                     e.preventDefault();
-                    setIsOpen(true);
+                    setIsPolicyOpen(true);
                   }}
                 >
                   политикой обработки персональных данных

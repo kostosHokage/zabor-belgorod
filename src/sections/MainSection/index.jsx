@@ -17,7 +17,7 @@ const MainSection = () => {
         <Button href="#form" title="Вызвать замерщика" />
       </div>
       <div className="main-image">
-        <img src="/images/mainPhoto.png" alt="mainPhoto" />
+        <img loading={'lazy'} src="/images/mainPhoto.png" alt="mainPhoto" />
       </div>
     </div>
   );

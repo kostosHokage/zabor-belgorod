@@ -1,6 +1,6 @@
 .header {
-  position: relative;
   display: flex;
+  margin: 0 auto;
   justify-content: space-between;
   max-height: 103px;
   height: 100%;
@@ -8,7 +8,6 @@
   max-width: 1317px;
   padding: 12px 0;
   transition: all 0.3s ease;
-  z-index: 1000;
 
   &.scrolled {
     background: rgba(255, 255, 255, 0.95);
@@ -18,6 +17,14 @@
   @media(max-width: 1320px) {
     padding: 12px 20px;
   }
+}
+
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: white;
 }
 
 .logo {
@@ -101,30 +108,6 @@
   }
 }
 
-.burger-icon {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 44px;
-  height: 44px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  z-index: 2100;
-  margin-left: 16px;
-
-  span {
-    display: block;
-    width: 28px;
-    height: 4px;
-    background: #0C4C01;
-    border-radius: 2px;
-    margin: 3px 0;
-    transition: background 0.3s;
-  }
-}
-
 .catalog-popup {
   position: absolute;
   top: 100%;
@@ -136,12 +119,10 @@
   margin: 0 auto;
   background: #F3F3F3;
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  z-index: 1000;
   border-top: 1px solid #eee;
   padding-top: 20px;
   overflow: hidden;
 
-  /* Начальное состояние (скрыто) */
   opacity: 0;
   visibility: hidden;
   max-height: 0;
@@ -151,14 +132,16 @@
           max-height 0.5s cubic-bezier(0.77, 0, 0.175, 1);
 
   &.active {
-    /* Открытое состояние */
     opacity: 1;
     visibility: visible;
-    max-height: 1000px; /* Достаточно большое значение для содержимого */
+    max-height: 1000px;
   }
 
   &__close {
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     top: 15px;
     right: 20px;
     background: none;
@@ -299,24 +282,10 @@
 
 @media (max-width: 1000px) {
   .nav {
-    display: none !important;
+    display: none;
   }
-  .burger-icon {
-    display: flex !important;
-  }
-  .callme {
-    display: none !important;
-  }
-}
 
-@media (min-width: 1001px) {
-  .burger-icon {
-    display: none !important;
-  }
-  .nav {
-    display: flex !important;
-  }
   .callme {
-    display: flex !important;
+    display: none;
   }
 }

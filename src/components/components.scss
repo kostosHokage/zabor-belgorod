@@ -52,6 +52,7 @@
 .questionCard {
   border-radius: 15px;
   max-width: 424px;
+  height: 100%;
 
   &__container {
     display: flex;
@@ -178,10 +179,10 @@
   }
 
   &-content {
+    z-index: 1;
     height: 100%;
     max-width: 150px;
     display: flex;
-    z-index: 100;
     justify-content: space-between;
     flex-direction: column;
 

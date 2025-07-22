@@ -4,6 +4,11 @@ import ContactsBlock from '@/app/contacts/ContactsBlock';
 import YandexMap from '@/components/YandexMap';
 import FadeInWhenVisible from '@/components/FadeInWhenVisible';
 
+export const metadata = {
+  title: 'Контакты | Заборы в Белгороде',
+  description: 'Свяжитесь с нами...',
+};
+
 const ContactsPage = () => {
   return (
     <FadeInWhenVisible>

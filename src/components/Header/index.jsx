@@ -6,9 +6,8 @@ import Button from '../Button';
 import CatalogPopup from '../Header/CatalogPopup';
 import Modal from '@/components/Modal';
 import CallForm from '@/components/CallForm';
-import FormComponent from '@/components/FormComponent';
-import BurgerMenu from '../BurgerMenu';
 import FadeInWhenVisible from '@/components/FadeInWhenVisible';
+import BurgerMenu from '@/components/BurgerMenu';
 
 const Header = () => {
   const [showCatalog, setShowCatalog] = useState(false);
@@ -50,7 +49,7 @@ const Header = () => {
 
   return (
     <FadeInWhenVisible>
-      <header className="header" ref={headerRef}>
+      <div className="header" ref={headerRef}>
         <div className="logo">
           <a href={'/'}>
             <div className="logo-content">
@@ -111,12 +110,12 @@ const Header = () => {
           />
         </div>
 
-        <BurgerMenu />
+        <BurgerMenu callBtn={() => setIsModalOpen(true)} />
 
         <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
           <CallForm />
         </Modal>
-      </header>
+      </div>
     </FadeInWhenVisible>
   );
 };

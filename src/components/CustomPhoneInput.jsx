@@ -81,7 +81,6 @@ const CustomPhoneInput = ({ control, name = 'phone', label }) => {
                   backgroundColor: '#ffa1a1',
                   color: '#D32F2F',
                   border: '1px solid #FFCDD2',
-                  zIndex: 100,
                 }}
               />
             )}

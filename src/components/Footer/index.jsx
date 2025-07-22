@@ -7,9 +7,6 @@ import PersonalData from '@/components/PersonalData';
 const Footer = () => {
   const [isPolicyOpen, setIsPolicyOpen] = useState(false);
 
-  const openPolicyModal = () => setIsPolicyOpen(true);
-  const closePolicyModal = () => setIsPolicyOpen(false);
-
   return (
     <div className="footer">
       <div className="footer-content">
@@ -52,7 +49,7 @@ const Footer = () => {
           <div className="footer-columns-item__name">Из цокольных кирпичей</div>
           <div className="footer-columns-item__name">Из евроштакетника</div>
           <div className="footer-columns-item__name">Из сетки</div>
-          <a href="/fences/concerte" className="footer-columns-item__name">
+          <a href="/zabory/beton" className="footer-columns-item__name">
             Из блоков
           </a>
           <div className="footer-columns-item__name">Бетонные заборы</div>
@@ -82,6 +79,12 @@ const Footer = () => {
           <div className="footer-columns-item__title">Контакты</div>
           <div className="footer-columns-item__name">Компания</div>
         </div>
+      </div>
+      <div className="footer-rules__mobile">
+        <span>© Заборы в Белгороде, 2025. Все права защищены.</span>
+        <span onClick={() => setIsPolicyOpen(true)}>
+          Политика обработки персональных данных
+        </span>
       </div>
       <PersonalData
         isOpen={isPolicyOpen}

@@ -3,7 +3,11 @@ import ProductPage from '@/components/productPage';
 import { concerteFence } from '@/data/products';
 import FadeInWhenVisible from '@/components/FadeInWhenVisible';
 
-const ConcreteFences = () => {
+export const metadata = {
+  title: `Заборы из Бетона | Заборы в Белгороде`,
+  description: 'Свяжитесь с нами...',
+};
+const ZaborIzBlokov = () => {
   return (
     <FadeInWhenVisible>
       <div>

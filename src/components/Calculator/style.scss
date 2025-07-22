@@ -4,8 +4,25 @@
   margin-bottom: 32px;
 
   input {
-
-    max-width: 318px;
     width: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .calcutalor {
+    flex-direction: column;
+    gap: 12px;
+
+    .css-1q29bjm-control {
+      width: 100% !important;
+
+      &:focus-visible {
+        width: 100%;
+      }
+    }
+
+    .css-1s9znz3-control {
+      width: 100%;
+    }
   }
 }

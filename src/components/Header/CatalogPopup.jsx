@@ -17,6 +17,7 @@ const CatalogPopup = forwardRef(({ isOpen, onClose }, ref) => {
       <button
         className="catalog-popup__close"
         onClick={onClose}
+        style={{ zIndex: 1 }}
         aria-label="Закрыть каталог"
       >
         <X size={24} />

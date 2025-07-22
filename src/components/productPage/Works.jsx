@@ -1,15 +1,9 @@
 'use client';
-import ReviewCard from './ReviewCard';
-import './style.scss';
-
 import React, { useEffect, useState } from 'react';
-import { reviews } from '@/data/reviews';
 import { Slider } from '@/sections/StocksSection';
-import TitleHeader from '@/components/TitleHeader';
-
-const ReviewsSection = () => {
-  const [slidesCount, setSlidesCount] = useState(0);
-  const [arrows, setArrows] = useState(true);
+import './style.scss';
+const Works = ({ worksPhotos }) => {
+  const [slidesCount, setSlidesCount] = useState(1);
 
   useEffect(() => {
     const handleResize = () => {
@@ -24,10 +18,6 @@ const ReviewsSection = () => {
         countSlides = 1;
       }
 
-      if (currWidth <= 1080) {
-        setArrows(false);
-      }
-
       setSlidesCount(countSlides);
     };
 
@@ -38,29 +28,29 @@ const ReviewsSection = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
-
-  console.log(slidesCount);
-
   let settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: arrows,
-    autoplay: slidesCount === 1,
-    autoplaySpeed: 5000,
+    arrows: true,
+    autoplay: true,
+    autoplaySpeed: 4000,
   };
   return (
     <div>
-      <TitleHeader title="Отзывы" />
       <Slider {...settings}>
-        {reviews.map((item) => {
-          return <ReviewCard key={item.name} review={item} />;
+        {worksPhotos.map((photo) => {
+          return (
+            <div className="works-slider-item">
+              <img src={photo} alt="work" />
+            </div>
+          );
         })}
       </Slider>
     </div>
   );
 };
 
-export default ReviewsSection;
+export default Works;

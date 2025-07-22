@@ -5,8 +5,10 @@
   //padding: 0 20px; При 1200 наверно
 }
 
+
 .layout-main {
   padding: 0 20px;
+  flex: 1;
 }
 
 .not-found {
@@ -54,6 +56,14 @@
       max-height: 520px;
     }
   }
+  
+  @media (max-width: 800px) {
+    margin-bottom: 100px;
+  }
+
+  @media (max-width: 500px) {
+    margin-bottom: 50px;
+  }
 }
 
 .contacts-header {
@@ -61,6 +71,11 @@
   justify-content: space-between;
   width: 100%;
   margin-bottom: 32px;
+  
+  @media (max-width: 1130px) {
+    flex-direction: column;
+    gap: 12px;
+  }
 }
 
 .contacts-block {
@@ -83,11 +98,21 @@
       gap: 8px;
       font-size: 24px;
       font-weight: 500;
+      word-break: break-word;
+
+      @media (max-width: 500px) {
+        font-size: 20px;
+      }
     }
 
     &:first-child {
       margin-right: 10px;
     }
+  }
+
+  @media (max-width: 858px) {
+    flex-direction: column;
+    gap: 24px;
   }
 }
 
@@ -106,6 +131,12 @@
     background: #0C4C01;
     color: white;
   }
+}
+
+.slick-track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .slick-slider {
@@ -152,6 +183,7 @@
 
 .modal-slider {
   height: 70vh;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -99,3 +99,35 @@ export const concerteFence = {
     },
   ],
 };
+
+export const woodFence = {
+  type: 'woodFence',
+  title: 'Деревянный забор: производство и установка под ключ',
+  price: 'от 1 200 руб. п/м',
+  mainImage: '/images/productPages/assortment/concrete/main.png',
+  name: 'Деревянные заборы',
+  description:
+    'Деревянный забор — идеальное решение для дачи, загородного дома или коттеджа. Он гармонично вписывается в ландшафт, подчеркивая стиль участка. Ограждения из дерева экологичны, долговечны и эстетичны. Покупка в нашей компании гарантирует качество материалов, профессиональный монтаж и индивидуальный подход.\n' +
+    'Мы предлагаем заборы из штакетника, плетенки или шахматки с установкой в Белгороде и области.\n',
+  dots: [
+    'Экологичность материалов',
+    'Эстетика и разнообразие дизайна.',
+    'Долговечность с обработкой',
+    'Простота установки',
+  ],
+  cardTitle: 'Преимущества деревянных заборов',
+  cardPhotos: [
+    '/images/productPages/assortment/concrete/card/first.png',
+    '/images/productPages/assortment/concrete/card/second.png',
+  ],
+  worksPhotos: ['/images/productPages/works/beton/1.png'],
+  assortment: [
+    {
+      image: '/images/productPages/assortment/concrete/image.png',
+      height: '1.9м',
+      color: 'Коралл',
+      width: '0.1м',
+      price: 'от 1 200 руб. п/м',
+    },
+  ],
+};
