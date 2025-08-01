@@ -1,0 +1,127 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "/zabor-belgorod",
+  "redirects": [
+    {
+      "source": "/zabor-belgorod/",
+      "destination": "/zabor-belgorod",
+      "basePath": false,
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^/zabor-belgorod/$"
+    },
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "dynamicRoutes": [],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/company",
+      "regex": "^/company(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/company(?:/)?$"
+    },
+    {
+      "page": "/contacts",
+      "regex": "^/contacts(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/contacts(?:/)?$"
+    },
+    {
+      "page": "/works",
+      "regex": "^/works(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/works(?:/)?$"
+    },
+    {
+      "page": "/zabory/zabory-is-blokov",
+      "regex": "^/zabory/zabory\\-is\\-blokov(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/zabory/zabory\\-is\\-blokov(?:/)?$"
+    },
+    {
+      "page": "/zabory/zabory-iz-betona",
+      "regex": "^/zabory/zabory\\-iz\\-betona(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/zabory/zabory\\-iz\\-betona(?:/)?$"
+    },
+    {
+      "page": "/zabory/zabory-iz-dereva",
+      "regex": "^/zabory/zabory\\-iz\\-dereva(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/zabory/zabory\\-iz\\-dereva(?:/)?$"
+    },
+    {
+      "page": "/zabory/zabory-iz-evroshtaketnika",
+      "regex": "^/zabory/zabory\\-iz\\-evroshtaketnika(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/zabory/zabory\\-iz\\-evroshtaketnika(?:/)?$"
+    },
+    {
+      "page": "/zabory/zabory-iz-kirpicha",
+      "regex": "^/zabory/zabory\\-iz\\-kirpicha(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/zabory/zabory\\-iz\\-kirpicha(?:/)?$"
+    },
+    {
+      "page": "/zabory/zabory-iz-proflista",
+      "regex": "^/zabory/zabory\\-iz\\-proflista(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/zabory/zabory\\-iz\\-proflista(?:/)?$"
+    },
+    {
+      "page": "/zabory/zabory-iz-setki",
+      "regex": "^/zabory/zabory\\-iz\\-setki(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/zabory/zabory\\-iz\\-setki(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "RSC",
+    "varyHeader": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch",
+    "prefetchHeader": "Next-Router-Prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "Next-Router-Segment-Prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments"
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  },
+  "rewrites": {
+    "beforeFiles": [
+      {
+        "source": "/zabor-belgorod//_next/:path+",
+        "destination": "/zabor-belgorod/_next/:path+",
+        "regex": "^/zabor-belgorod//_next(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))(?:/)?$"
+      }
+    ],
+    "afterFiles": [],
+    "fallback": []
+  }
+}

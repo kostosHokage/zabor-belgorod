@@ -1,0 +1,14 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/page": "app/page.js",
+  "/zabory/zabory-is-blokov/page": "app/zabory/zabory-is-blokov/page.js",
+  "/contacts/page": "app/contacts/page.js",
+  "/company/page": "app/company/page.js",
+  "/zabory/zabory-iz-evroshtaketnika/page": "app/zabory/zabory-iz-evroshtaketnika/page.js",
+  "/zabory/zabory-iz-kirpicha/page": "app/zabory/zabory-iz-kirpicha/page.js",
+  "/zabory/zabory-iz-setki/page": "app/zabory/zabory-iz-setki/page.js",
+  "/zabory/zabory-iz-betona/page": "app/zabory/zabory-iz-betona/page.js",
+  "/zabory/zabory-iz-proflista/page": "app/zabory/zabory-iz-proflista/page.js",
+  "/zabory/zabory-iz-dereva/page": "app/zabory/zabory-iz-dereva/page.js",
+  "/works/page": "app/works/page.js"
+}
