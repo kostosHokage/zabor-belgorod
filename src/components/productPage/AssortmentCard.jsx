@@ -3,7 +3,6 @@ import './style.scss';
 import Button from '@/components/Button';
 
 const AssortmentCard = ({ item }) => {
-  console.log(item);
   return (
     <div key={item.image} className="assortment-card">
       <div className="assortment-card__content">

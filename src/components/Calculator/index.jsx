@@ -41,7 +41,7 @@ const Calculator = ({ defaultValue }) => {
   const selectedProduct = watch('product');
 
   const onSubmit = (data) => {
-    console.log(data);
+    return data;
   };
 
   return (

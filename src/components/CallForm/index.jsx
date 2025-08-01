@@ -29,7 +29,7 @@ const CallForm = () => {
       );
       return;
     }
-    console.log('Form submitted:', data);
+    return data;
   };
 
   return (

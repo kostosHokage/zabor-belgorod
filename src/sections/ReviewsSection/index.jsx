@@ -39,8 +39,6 @@ const ReviewsSection = () => {
     };
   }, []);
 
-  console.log(slidesCount);
-
   let settings = {
     dots: true,
     infinite: true,
