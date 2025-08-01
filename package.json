@@ -33,10 +33,12 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@types/gh-pages": "^6",
     "@types/node": "22.14.1",
     "@types/react": "19.1.5",
     "eslint": "^9.22.0",
     "eslint-config-next": "15.1.7",
+    "gh-pages": "^6.3.0",
     "typescript": "5.8.3"
   },
   "packageManager": "yarn@4.5.1"
