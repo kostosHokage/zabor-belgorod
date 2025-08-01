@@ -17,4 +17,4 @@ const ZaborIzBlokov = () => {
   );
 };
 
-export default ConcreteFences;
+export default ZaborIzBlokov;
